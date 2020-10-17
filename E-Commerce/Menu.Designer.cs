@@ -52,11 +52,11 @@
             this.btBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panelImg1 = new System.Windows.Forms.Panel();
+            this.lblPrecio1 = new System.Windows.Forms.Label();
+            this.IMG1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.btCarrito = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.IMG1 = new System.Windows.Forms.Panel();
-            this.lblPrecio1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btIzquierda = new System.Windows.Forms.Button();
             this.btDerecha = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -69,15 +69,15 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.panelFiltros);
             this.panel1.Controls.Add(this.btFiltros);
             this.panel1.Controls.Add(this.panelPerfil);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btPerfil);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 769);
+            this.panel1.Size = new System.Drawing.Size(198, 769);
             this.panel1.TabIndex = 0;
             // 
             // panelFiltros
@@ -87,7 +87,7 @@
             this.panelFiltros.Controls.Add(this.btPrecio);
             this.panelFiltros.Location = new System.Drawing.Point(3, 181);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(207, 197);
+            this.panelFiltros.Size = new System.Drawing.Size(189, 197);
             this.panelFiltros.TabIndex = 7;
             this.panelFiltros.Visible = false;
             // 
@@ -99,7 +99,7 @@
             this.btDescuento.Image = ((System.Drawing.Image)(resources.GetObject("btDescuento.Image")));
             this.btDescuento.Location = new System.Drawing.Point(6, 55);
             this.btDescuento.Name = "btDescuento";
-            this.btDescuento.Size = new System.Drawing.Size(191, 66);
+            this.btDescuento.Size = new System.Drawing.Size(177, 66);
             this.btDescuento.TabIndex = 6;
             this.btDescuento.Text = "Descuento";
             this.btDescuento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,7 +113,7 @@
             this.btCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btCategorias.Image")));
             this.btCategorias.Location = new System.Drawing.Point(9, 114);
             this.btCategorias.Name = "btCategorias";
-            this.btCategorias.Size = new System.Drawing.Size(180, 66);
+            this.btCategorias.Size = new System.Drawing.Size(174, 66);
             this.btCategorias.TabIndex = 5;
             this.btCategorias.Text = "Categorias";
             this.btCategorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -141,7 +141,7 @@
             this.btFiltros.Image = ((System.Drawing.Image)(resources.GetObject("btFiltros.Image")));
             this.btFiltros.Location = new System.Drawing.Point(6, 109);
             this.btFiltros.Name = "btFiltros";
-            this.btFiltros.Size = new System.Drawing.Size(194, 66);
+            this.btFiltros.Size = new System.Drawing.Size(186, 66);
             this.btFiltros.TabIndex = 6;
             this.btFiltros.Text = "Filtros";
             this.btFiltros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -156,7 +156,7 @@
             this.panelPerfil.Controls.Add(this.btCerrarSesion);
             this.panelPerfil.Location = new System.Drawing.Point(3, 499);
             this.panelPerfil.Name = "panelPerfil";
-            this.panelPerfil.Size = new System.Drawing.Size(207, 214);
+            this.panelPerfil.Size = new System.Drawing.Size(189, 214);
             this.panelPerfil.TabIndex = 5;
             this.panelPerfil.Visible = false;
             // 
@@ -168,7 +168,7 @@
             this.btEditarPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btEditarPerfil.Image")));
             this.btEditarPerfil.Location = new System.Drawing.Point(9, 75);
             this.btEditarPerfil.Name = "btEditarPerfil";
-            this.btEditarPerfil.Size = new System.Drawing.Size(180, 66);
+            this.btEditarPerfil.Size = new System.Drawing.Size(174, 66);
             this.btEditarPerfil.TabIndex = 6;
             this.btEditarPerfil.Text = "Editar Perfil";
             this.btEditarPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,7 +196,7 @@
             this.btCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btCerrarSesion.Image")));
             this.btCerrarSesion.Location = new System.Drawing.Point(9, 145);
             this.btCerrarSesion.Name = "btCerrarSesion";
-            this.btCerrarSesion.Size = new System.Drawing.Size(180, 66);
+            this.btCerrarSesion.Size = new System.Drawing.Size(174, 66);
             this.btCerrarSesion.TabIndex = 5;
             this.btCerrarSesion.Text = "Cerrar Sesión";
             this.btCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -209,7 +209,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(213, 100);
+            this.panel3.Size = new System.Drawing.Size(198, 100);
             this.panel3.TabIndex = 0;
             // 
             // label1
@@ -218,7 +218,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Impact", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(4, 21);
+            this.label1.Location = new System.Drawing.Point(25, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 46);
             this.label1.TabIndex = 0;
@@ -232,7 +232,7 @@
             this.btPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btPerfil.Image")));
             this.btPerfil.Location = new System.Drawing.Point(6, 427);
             this.btPerfil.Name = "btPerfil";
-            this.btPerfil.Size = new System.Drawing.Size(194, 66);
+            this.btPerfil.Size = new System.Drawing.Size(180, 66);
             this.btPerfil.TabIndex = 3;
             this.btPerfil.Text = "Perfil";
             this.btPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -260,7 +260,7 @@
             // 
             // txBusqueda
             // 
-            this.txBusqueda.Location = new System.Drawing.Point(360, 21);
+            this.txBusqueda.Location = new System.Drawing.Point(360, 36);
             this.txBusqueda.Name = "txBusqueda";
             this.txBusqueda.Size = new System.Drawing.Size(777, 32);
             this.txBusqueda.TabIndex = 4;
@@ -272,7 +272,7 @@
             this.btCerrar.FlatAppearance.BorderSize = 0;
             this.btCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCerrar.ForeColor = System.Drawing.Color.White;
-            this.btCerrar.Location = new System.Drawing.Point(1331, 0);
+            this.btCerrar.Location = new System.Drawing.Point(1331, 12);
             this.btCerrar.Name = "btCerrar";
             this.btCerrar.Size = new System.Drawing.Size(33, 31);
             this.btCerrar.TabIndex = 10;
@@ -288,7 +288,7 @@
             this.btFull.FlatAppearance.BorderSize = 0;
             this.btFull.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btFull.ForeColor = System.Drawing.Color.White;
-            this.btFull.Location = new System.Drawing.Point(1292, 0);
+            this.btFull.Location = new System.Drawing.Point(1292, 12);
             this.btFull.Name = "btFull";
             this.btFull.Size = new System.Drawing.Size(33, 31);
             this.btFull.TabIndex = 11;
@@ -304,7 +304,7 @@
             this.btMinimizar.FlatAppearance.BorderSize = 0;
             this.btMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btMinimizar.Location = new System.Drawing.Point(1253, 0);
+            this.btMinimizar.Location = new System.Drawing.Point(1253, 12);
             this.btMinimizar.Name = "btMinimizar";
             this.btMinimizar.Size = new System.Drawing.Size(33, 31);
             this.btMinimizar.TabIndex = 12;
@@ -321,7 +321,7 @@
             this.btWindow.FlatAppearance.BorderSize = 0;
             this.btWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btWindow.ForeColor = System.Drawing.Color.White;
-            this.btWindow.Location = new System.Drawing.Point(1292, 0);
+            this.btWindow.Location = new System.Drawing.Point(1292, 12);
             this.btWindow.Name = "btWindow";
             this.btWindow.Size = new System.Drawing.Size(33, 31);
             this.btWindow.TabIndex = 13;
@@ -370,16 +370,47 @@
             this.panelImg1.Size = new System.Drawing.Size(200, 466);
             this.panelImg1.TabIndex = 9;
             // 
+            // lblPrecio1
+            // 
+            this.lblPrecio1.AutoSize = true;
+            this.lblPrecio1.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecio1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblPrecio1.Location = new System.Drawing.Point(58, 257);
+            this.lblPrecio1.Name = "lblPrecio1";
+            this.lblPrecio1.Size = new System.Drawing.Size(81, 23);
+            this.lblPrecio1.TabIndex = 15;
+            this.lblPrecio1.Text = "$80.000";
+            // 
+            // IMG1
+            // 
+            this.IMG1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IMG1.BackgroundImage")));
+            this.IMG1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IMG1.Controls.Add(this.label5);
+            this.IMG1.Location = new System.Drawing.Point(0, 0);
+            this.IMG1.Name = "IMG1";
+            this.IMG1.Size = new System.Drawing.Size(200, 228);
+            this.IMG1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(47, 2);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 23);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Oneplus 5T";
+            // 
             // btCarrito
             // 
-            this.btCarrito.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btCarrito.FlatAppearance.BorderSize = 0;
             this.btCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCarrito.ForeColor = System.Drawing.Color.White;
             this.btCarrito.Image = ((System.Drawing.Image)(resources.GetObject("btCarrito.Image")));
-            this.btCarrito.Location = new System.Drawing.Point(213, 703);
+            this.btCarrito.Location = new System.Drawing.Point(198, 703);
             this.btCarrito.Name = "btCarrito";
-            this.btCarrito.Size = new System.Drawing.Size(1163, 66);
+            this.btCarrito.Size = new System.Drawing.Size(1178, 66);
             this.btCarrito.TabIndex = 8;
             this.btCarrito.Text = "Carrito";
             this.btCarrito.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -396,38 +427,6 @@
             this.label4.Size = new System.Drawing.Size(103, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "Subtotal: ";
-            // 
-            // IMG1
-            // 
-            this.IMG1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IMG1.BackgroundImage")));
-            this.IMG1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IMG1.Controls.Add(this.label5);
-            this.IMG1.Location = new System.Drawing.Point(0, 0);
-            this.IMG1.Name = "IMG1";
-            this.IMG1.Size = new System.Drawing.Size(200, 228);
-            this.IMG1.TabIndex = 0;
-            // 
-            // lblPrecio1
-            // 
-            this.lblPrecio1.AutoSize = true;
-            this.lblPrecio1.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrecio1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblPrecio1.Location = new System.Drawing.Point(58, 257);
-            this.lblPrecio1.Name = "lblPrecio1";
-            this.lblPrecio1.Size = new System.Drawing.Size(81, 23);
-            this.lblPrecio1.TabIndex = 15;
-            this.lblPrecio1.Text = "$80.000";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(47, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 23);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Oneplus 5T";
             // 
             // btIzquierda
             // 
