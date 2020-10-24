@@ -88,5 +88,12 @@ namespace E_Commerce
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btIniciarSesion_Click(object sender, EventArgs e)
+        {
+            Login formLogin = new Login();
+            this.Hide();
+            formLogin.Show();
+        }
     }
 }
