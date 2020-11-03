@@ -51,43 +51,53 @@
             this.btWindow = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
             this.lblProductos = new System.Windows.Forms.Label();
-            this.panelImg1 = new System.Windows.Forms.Panel();
+            this.panelProducto1 = new System.Windows.Forms.Panel();
+            this.lblProducto1 = new System.Windows.Forms.Label();
+            this.lblDesc1 = new System.Windows.Forms.Label();
             this.btCarrito1 = new System.Windows.Forms.Button();
             this.lblPrecio1 = new System.Windows.Forms.Label();
             this.img1 = new System.Windows.Forms.Panel();
-            this.lblProducto1 = new System.Windows.Forms.Label();
             this.btCarrito = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btIzquierda = new System.Windows.Forms.Button();
             this.btDerecha = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.panelProducto2 = new System.Windows.Forms.Panel();
+            this.lblProducto2 = new System.Windows.Forms.Label();
+            this.lblDesc2 = new System.Windows.Forms.Label();
+            this.btCarrito2 = new System.Windows.Forms.Button();
+            this.lblPrecio2 = new System.Windows.Forms.Label();
+            this.img2 = new System.Windows.Forms.Panel();
+            this.panelProducto3 = new System.Windows.Forms.Panel();
+            this.lblProducto3 = new System.Windows.Forms.Label();
+            this.lblDesc3 = new System.Windows.Forms.Label();
+            this.btCarrito3 = new System.Windows.Forms.Button();
+            this.lblPrecio3 = new System.Windows.Forms.Label();
+            this.img3 = new System.Windows.Forms.Panel();
+            this.panelProducto4 = new System.Windows.Forms.Panel();
+            this.lblProducto4 = new System.Windows.Forms.Label();
+            this.lblDesc4 = new System.Windows.Forms.Label();
+            this.btCarrito4 = new System.Windows.Forms.Button();
+            this.lblPrecio4 = new System.Windows.Forms.Label();
+            this.img4 = new System.Windows.Forms.Panel();
             this.btIniciarSesion = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.img12 = new System.Windows.Forms.Panel();
+            this.img13 = new System.Windows.Forms.Panel();
+            this.img22 = new System.Windows.Forms.Panel();
+            this.img23 = new System.Windows.Forms.Panel();
+            this.img32 = new System.Windows.Forms.Panel();
+            this.img33 = new System.Windows.Forms.Panel();
+            this.img42 = new System.Windows.Forms.Panel();
+            this.img43 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             this.panelPerfil.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panelImg1.SuspendLayout();
-            this.img1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelProducto1.SuspendLayout();
+            this.panelProducto2.SuspendLayout();
+            this.panelProducto3.SuspendLayout();
+            this.panelProducto4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -198,6 +208,7 @@
             this.btEditarPerfil.Text = "Editar Perfil";
             this.btEditarPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btEditarPerfil.UseVisualStyleBackColor = true;
+            this.btEditarPerfil.Click += new System.EventHandler(this.btEditarPerfil_Click);
             // 
             // btPedidos
             // 
@@ -226,6 +237,7 @@
             this.btCerrarSesion.Text = "Cerrar Sesión";
             this.btCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btCerrarSesion.UseVisualStyleBackColor = true;
+            this.btCerrarSesion.Click += new System.EventHandler(this.btCerrarSesion_Click);
             // 
             // panel3
             // 
@@ -285,7 +297,7 @@
             // 
             // txBusqueda
             // 
-            this.txBusqueda.Location = new System.Drawing.Point(315, 21);
+            this.txBusqueda.Location = new System.Drawing.Point(343, 27);
             this.txBusqueda.Name = "txBusqueda";
             this.txBusqueda.Size = new System.Drawing.Size(777, 32);
             this.txBusqueda.TabIndex = 4;
@@ -366,7 +378,7 @@
             this.btBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBuscar.ForeColor = System.Drawing.Color.White;
             this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
-            this.btBuscar.Location = new System.Drawing.Point(1098, 0);
+            this.btBuscar.Location = new System.Drawing.Point(1118, 0);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(94, 86);
             this.btBuscar.TabIndex = 8;
@@ -384,20 +396,47 @@
             this.lblProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblProductos.Location = new System.Drawing.Point(651, 80);
             this.lblProductos.Name = "lblProductos";
-            this.lblProductos.Size = new System.Drawing.Size(426, 52);
+            this.lblProductos.Size = new System.Drawing.Size(355, 52);
             this.lblProductos.TabIndex = 1;
-            this.lblProductos.Text = "PRODUCTOS DESTACADOS";
+            this.lblProductos.Text = "Productos Destacados";
             // 
-            // panelImg1
+            // panelProducto1
             // 
-            this.panelImg1.BackColor = System.Drawing.Color.White;
-            this.panelImg1.Controls.Add(this.btCarrito1);
-            this.panelImg1.Controls.Add(this.lblPrecio1);
-            this.panelImg1.Controls.Add(this.img1);
-            this.panelImg1.Location = new System.Drawing.Point(381, 162);
-            this.panelImg1.Name = "panelImg1";
-            this.panelImg1.Size = new System.Drawing.Size(200, 466);
-            this.panelImg1.TabIndex = 9;
+            this.panelProducto1.BackColor = System.Drawing.Color.White;
+            this.panelProducto1.Controls.Add(this.img13);
+            this.panelProducto1.Controls.Add(this.img12);
+            this.panelProducto1.Controls.Add(this.lblProducto1);
+            this.panelProducto1.Controls.Add(this.lblDesc1);
+            this.panelProducto1.Controls.Add(this.btCarrito1);
+            this.panelProducto1.Controls.Add(this.lblPrecio1);
+            this.panelProducto1.Controls.Add(this.img1);
+            this.panelProducto1.Location = new System.Drawing.Point(360, 135);
+            this.panelProducto1.Name = "panelProducto1";
+            this.panelProducto1.Size = new System.Drawing.Size(200, 530);
+            this.panelProducto1.TabIndex = 9;
+            // 
+            // lblProducto1
+            // 
+            this.lblProducto1.BackColor = System.Drawing.Color.Transparent;
+            this.lblProducto1.ForeColor = System.Drawing.Color.Black;
+            this.lblProducto1.Location = new System.Drawing.Point(3, 0);
+            this.lblProducto1.Name = "lblProducto1";
+            this.lblProducto1.Size = new System.Drawing.Size(194, 23);
+            this.lblProducto1.TabIndex = 16;
+            this.lblProducto1.Text = "1";
+            this.lblProducto1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDesc1
+            // 
+            this.lblDesc1.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesc1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc1.ForeColor = System.Drawing.Color.Black;
+            this.lblDesc1.Location = new System.Drawing.Point(3, 323);
+            this.lblDesc1.Name = "lblDesc1";
+            this.lblDesc1.Size = new System.Drawing.Size(194, 166);
+            this.lblDesc1.TabIndex = 17;
+            this.lblDesc1.Text = "1";
+            this.lblDesc1.Click += new System.EventHandler(this.lblDesc1_Click);
             // 
             // btCarrito1
             // 
@@ -407,7 +446,7 @@
             this.btCarrito1.FlatAppearance.BorderSize = 0;
             this.btCarrito1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCarrito1.ForeColor = System.Drawing.Color.White;
-            this.btCarrito1.Location = new System.Drawing.Point(42, 412);
+            this.btCarrito1.Location = new System.Drawing.Point(41, 492);
             this.btCarrito1.Name = "btCarrito1";
             this.btCarrito1.Size = new System.Drawing.Size(112, 35);
             this.btCarrito1.TabIndex = 17;
@@ -420,7 +459,7 @@
             this.lblPrecio1.AutoSize = true;
             this.lblPrecio1.BackColor = System.Drawing.Color.Transparent;
             this.lblPrecio1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblPrecio1.Location = new System.Drawing.Point(58, 257);
+            this.lblPrecio1.Location = new System.Drawing.Point(61, 300);
             this.lblPrecio1.Name = "lblPrecio1";
             this.lblPrecio1.Size = new System.Drawing.Size(81, 23);
             this.lblPrecio1.TabIndex = 15;
@@ -428,24 +467,11 @@
             // 
             // img1
             // 
-            this.img1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("img1.BackgroundImage")));
             this.img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.img1.Controls.Add(this.lblProducto1);
-            this.img1.Location = new System.Drawing.Point(0, 0);
+            this.img1.Location = new System.Drawing.Point(0, 26);
             this.img1.Name = "img1";
-            this.img1.Size = new System.Drawing.Size(200, 228);
+            this.img1.Size = new System.Drawing.Size(200, 169);
             this.img1.TabIndex = 0;
-            // 
-            // lblProducto1
-            // 
-            this.lblProducto1.AutoSize = true;
-            this.lblProducto1.BackColor = System.Drawing.Color.Transparent;
-            this.lblProducto1.ForeColor = System.Drawing.Color.Black;
-            this.lblProducto1.Location = new System.Drawing.Point(47, 2);
-            this.lblProducto1.Name = "lblProducto1";
-            this.lblProducto1.Size = new System.Drawing.Size(116, 23);
-            this.lblProducto1.TabIndex = 16;
-            this.lblProducto1.Text = "Oneplus 5T";
             // 
             // btCarrito
             // 
@@ -482,13 +508,14 @@
             this.btIzquierda.FlatAppearance.BorderSize = 0;
             this.btIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btIzquierda.ForeColor = System.Drawing.Color.White;
-            this.btIzquierda.Location = new System.Drawing.Point(281, 319);
+            this.btIzquierda.Location = new System.Drawing.Point(262, 323);
             this.btIzquierda.Name = "btIzquierda";
             this.btIzquierda.Size = new System.Drawing.Size(94, 86);
             this.btIzquierda.TabIndex = 15;
             this.btIzquierda.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btIzquierda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btIzquierda.UseVisualStyleBackColor = false;
+            this.btIzquierda.Click += new System.EventHandler(this.btIzquierda_Click);
             // 
             // btDerecha
             // 
@@ -498,190 +525,230 @@
             this.btDerecha.FlatAppearance.BorderSize = 0;
             this.btDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDerecha.ForeColor = System.Drawing.Color.White;
-            this.btDerecha.Location = new System.Drawing.Point(1292, 319);
+            this.btDerecha.Location = new System.Drawing.Point(1273, 323);
             this.btDerecha.Name = "btDerecha";
             this.btDerecha.Size = new System.Drawing.Size(94, 86);
             this.btDerecha.TabIndex = 16;
             this.btDerecha.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btDerecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btDerecha.UseVisualStyleBackColor = false;
+            this.btDerecha.Click += new System.EventHandler(this.btDerecha_Click);
             // 
-            // panel2
+            // panelProducto2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(618, 162);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 466);
-            this.panel2.TabIndex = 18;
+            this.panelProducto2.BackColor = System.Drawing.Color.White;
+            this.panelProducto2.Controls.Add(this.img23);
+            this.panelProducto2.Controls.Add(this.img22);
+            this.panelProducto2.Controls.Add(this.lblProducto2);
+            this.panelProducto2.Controls.Add(this.lblDesc2);
+            this.panelProducto2.Controls.Add(this.btCarrito2);
+            this.panelProducto2.Controls.Add(this.lblPrecio2);
+            this.panelProducto2.Controls.Add(this.img2);
+            this.panelProducto2.Location = new System.Drawing.Point(597, 135);
+            this.panelProducto2.Name = "panelProducto2";
+            this.panelProducto2.Size = new System.Drawing.Size(200, 530);
+            this.panelProducto2.TabIndex = 18;
             // 
-            // button1
+            // lblProducto2
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(42, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 17;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblProducto2.BackColor = System.Drawing.Color.Transparent;
+            this.lblProducto2.ForeColor = System.Drawing.Color.Black;
+            this.lblProducto2.Location = new System.Drawing.Point(7, 0);
+            this.lblProducto2.Name = "lblProducto2";
+            this.lblProducto2.Size = new System.Drawing.Size(190, 23);
+            this.lblProducto2.TabIndex = 16;
+            this.lblProducto2.Text = "2";
+            this.lblProducto2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblDesc2
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(58, 257);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 23);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "$80.000";
+            this.lblDesc2.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesc2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc2.ForeColor = System.Drawing.Color.Black;
+            this.lblDesc2.Location = new System.Drawing.Point(3, 323);
+            this.lblDesc2.Name = "lblDesc2";
+            this.lblDesc2.Size = new System.Drawing.Size(194, 166);
+            this.lblDesc2.TabIndex = 18;
+            this.lblDesc2.Text = "1";
             // 
-            // panel4
+            // btCarrito2
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 228);
-            this.panel4.TabIndex = 0;
+            this.btCarrito2.BackColor = System.Drawing.Color.Transparent;
+            this.btCarrito2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCarrito2.BackgroundImage")));
+            this.btCarrito2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btCarrito2.FlatAppearance.BorderSize = 0;
+            this.btCarrito2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCarrito2.ForeColor = System.Drawing.Color.White;
+            this.btCarrito2.Location = new System.Drawing.Point(39, 492);
+            this.btCarrito2.Name = "btCarrito2";
+            this.btCarrito2.Size = new System.Drawing.Size(112, 35);
+            this.btCarrito2.TabIndex = 17;
+            this.btCarrito2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btCarrito2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btCarrito2.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // lblPrecio2
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(47, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 23);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Oneplus 5T";
+            this.lblPrecio2.AutoSize = true;
+            this.lblPrecio2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecio2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblPrecio2.Location = new System.Drawing.Point(57, 300);
+            this.lblPrecio2.Name = "lblPrecio2";
+            this.lblPrecio2.Size = new System.Drawing.Size(81, 23);
+            this.lblPrecio2.TabIndex = 15;
+            this.lblPrecio2.Text = "$80.000";
             // 
-            // panel5
+            // img2
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(856, 162);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 466);
-            this.panel5.TabIndex = 18;
+            this.img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img2.Location = new System.Drawing.Point(0, 26);
+            this.img2.Name = "img2";
+            this.img2.Size = new System.Drawing.Size(200, 169);
+            this.img2.TabIndex = 0;
             // 
-            // button2
+            // panelProducto3
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(42, 412);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
-            this.button2.TabIndex = 17;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.panelProducto3.BackColor = System.Drawing.Color.White;
+            this.panelProducto3.Controls.Add(this.img33);
+            this.panelProducto3.Controls.Add(this.img32);
+            this.panelProducto3.Controls.Add(this.lblProducto3);
+            this.panelProducto3.Controls.Add(this.lblDesc3);
+            this.panelProducto3.Controls.Add(this.btCarrito3);
+            this.panelProducto3.Controls.Add(this.lblPrecio3);
+            this.panelProducto3.Controls.Add(this.img3);
+            this.panelProducto3.Location = new System.Drawing.Point(835, 135);
+            this.panelProducto3.Name = "panelProducto3";
+            this.panelProducto3.Size = new System.Drawing.Size(200, 530);
+            this.panelProducto3.TabIndex = 18;
             // 
-            // label6
+            // lblProducto3
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(58, 257);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 23);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "$80.000";
+            this.lblProducto3.BackColor = System.Drawing.Color.Transparent;
+            this.lblProducto3.ForeColor = System.Drawing.Color.Black;
+            this.lblProducto3.Location = new System.Drawing.Point(7, 0);
+            this.lblProducto3.Name = "lblProducto3";
+            this.lblProducto3.Size = new System.Drawing.Size(190, 23);
+            this.lblProducto3.TabIndex = 16;
+            this.lblProducto3.Text = "3";
+            this.lblProducto3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel6
+            // lblDesc3
             // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 228);
-            this.panel6.TabIndex = 0;
+            this.lblDesc3.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesc3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc3.ForeColor = System.Drawing.Color.Black;
+            this.lblDesc3.Location = new System.Drawing.Point(3, 323);
+            this.lblDesc3.Name = "lblDesc3";
+            this.lblDesc3.Size = new System.Drawing.Size(194, 166);
+            this.lblDesc3.TabIndex = 19;
+            this.lblDesc3.Text = "1";
             // 
-            // label7
+            // btCarrito3
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(47, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 23);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Oneplus 5T";
+            this.btCarrito3.BackColor = System.Drawing.Color.Transparent;
+            this.btCarrito3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCarrito3.BackgroundImage")));
+            this.btCarrito3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btCarrito3.FlatAppearance.BorderSize = 0;
+            this.btCarrito3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCarrito3.ForeColor = System.Drawing.Color.White;
+            this.btCarrito3.Location = new System.Drawing.Point(39, 492);
+            this.btCarrito3.Name = "btCarrito3";
+            this.btCarrito3.Size = new System.Drawing.Size(112, 35);
+            this.btCarrito3.TabIndex = 17;
+            this.btCarrito3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btCarrito3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btCarrito3.UseVisualStyleBackColor = false;
             // 
-            // panel7
+            // lblPrecio3
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.button3);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(1095, 162);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 466);
-            this.panel7.TabIndex = 18;
+            this.lblPrecio3.AutoSize = true;
+            this.lblPrecio3.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecio3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblPrecio3.Location = new System.Drawing.Point(59, 300);
+            this.lblPrecio3.Name = "lblPrecio3";
+            this.lblPrecio3.Size = new System.Drawing.Size(81, 23);
+            this.lblPrecio3.TabIndex = 15;
+            this.lblPrecio3.Text = "$80.000";
             // 
-            // button3
+            // img3
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(42, 412);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 17;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.img3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img3.Location = new System.Drawing.Point(0, 26);
+            this.img3.Name = "img3";
+            this.img3.Size = new System.Drawing.Size(200, 169);
+            this.img3.TabIndex = 0;
             // 
-            // label8
+            // panelProducto4
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(58, 257);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 23);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "$80.000";
+            this.panelProducto4.BackColor = System.Drawing.Color.White;
+            this.panelProducto4.Controls.Add(this.img43);
+            this.panelProducto4.Controls.Add(this.img42);
+            this.panelProducto4.Controls.Add(this.lblProducto4);
+            this.panelProducto4.Controls.Add(this.lblDesc4);
+            this.panelProducto4.Controls.Add(this.btCarrito4);
+            this.panelProducto4.Controls.Add(this.lblPrecio4);
+            this.panelProducto4.Controls.Add(this.img4);
+            this.panelProducto4.Location = new System.Drawing.Point(1074, 135);
+            this.panelProducto4.Name = "panelProducto4";
+            this.panelProducto4.Size = new System.Drawing.Size(200, 530);
+            this.panelProducto4.TabIndex = 18;
             // 
-            // panel8
+            // lblProducto4
             // 
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 228);
-            this.panel8.TabIndex = 0;
+            this.lblProducto4.BackColor = System.Drawing.Color.Transparent;
+            this.lblProducto4.ForeColor = System.Drawing.Color.Black;
+            this.lblProducto4.Location = new System.Drawing.Point(7, 0);
+            this.lblProducto4.Name = "lblProducto4";
+            this.lblProducto4.Size = new System.Drawing.Size(190, 23);
+            this.lblProducto4.TabIndex = 16;
+            this.lblProducto4.Text = "4";
+            this.lblProducto4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // lblDesc4
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(47, 2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 23);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Oneplus 5T";
+            this.lblDesc4.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesc4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc4.ForeColor = System.Drawing.Color.Black;
+            this.lblDesc4.Location = new System.Drawing.Point(3, 323);
+            this.lblDesc4.Name = "lblDesc4";
+            this.lblDesc4.Size = new System.Drawing.Size(194, 166);
+            this.lblDesc4.TabIndex = 20;
+            this.lblDesc4.Text = "1";
+            // 
+            // btCarrito4
+            // 
+            this.btCarrito4.BackColor = System.Drawing.Color.Transparent;
+            this.btCarrito4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btCarrito4.BackgroundImage")));
+            this.btCarrito4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btCarrito4.FlatAppearance.BorderSize = 0;
+            this.btCarrito4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCarrito4.ForeColor = System.Drawing.Color.White;
+            this.btCarrito4.Location = new System.Drawing.Point(44, 492);
+            this.btCarrito4.Name = "btCarrito4";
+            this.btCarrito4.Size = new System.Drawing.Size(112, 35);
+            this.btCarrito4.TabIndex = 17;
+            this.btCarrito4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btCarrito4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btCarrito4.UseVisualStyleBackColor = false;
+            // 
+            // lblPrecio4
+            // 
+            this.lblPrecio4.AutoSize = true;
+            this.lblPrecio4.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecio4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblPrecio4.Location = new System.Drawing.Point(57, 300);
+            this.lblPrecio4.Name = "lblPrecio4";
+            this.lblPrecio4.Size = new System.Drawing.Size(81, 23);
+            this.lblPrecio4.TabIndex = 15;
+            this.lblPrecio4.Text = "$80.000";
+            // 
+            // img4
+            // 
+            this.img4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img4.Location = new System.Drawing.Point(0, 26);
+            this.img4.Name = "img4";
+            this.img4.Size = new System.Drawing.Size(200, 169);
+            this.img4.TabIndex = 0;
             // 
             // btIniciarSesion
             // 
@@ -701,6 +768,95 @@
             this.btIniciarSesion.UseVisualStyleBackColor = false;
             this.btIniciarSesion.Click += new System.EventHandler(this.btIniciarSesion_Click);
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(204, 36);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(132, 40);
+            this.lblUsuario.TabIndex = 19;
+            this.lblUsuario.Text = "usuario";
+            this.lblUsuario.Visible = false;
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.BackColor = System.Drawing.Color.Transparent;
+            this.lblBienvenido.ForeColor = System.Drawing.Color.White;
+            this.lblBienvenido.Location = new System.Drawing.Point(204, 9);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(117, 23);
+            this.lblBienvenido.TabIndex = 20;
+            this.lblBienvenido.Text = "Bienvenido";
+            this.lblBienvenido.Visible = false;
+            // 
+            // img12
+            // 
+            this.img12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img12.Location = new System.Drawing.Point(19, 201);
+            this.img12.Name = "img12";
+            this.img12.Size = new System.Drawing.Size(69, 96);
+            this.img12.TabIndex = 1;
+            // 
+            // img13
+            // 
+            this.img13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img13.Location = new System.Drawing.Point(112, 201);
+            this.img13.Name = "img13";
+            this.img13.Size = new System.Drawing.Size(69, 96);
+            this.img13.TabIndex = 2;
+            // 
+            // img22
+            // 
+            this.img22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img22.Location = new System.Drawing.Point(22, 201);
+            this.img22.Name = "img22";
+            this.img22.Size = new System.Drawing.Size(69, 96);
+            this.img22.TabIndex = 3;
+            // 
+            // img23
+            // 
+            this.img23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img23.Location = new System.Drawing.Point(109, 201);
+            this.img23.Name = "img23";
+            this.img23.Size = new System.Drawing.Size(69, 96);
+            this.img23.TabIndex = 4;
+            // 
+            // img32
+            // 
+            this.img32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img32.Location = new System.Drawing.Point(21, 201);
+            this.img32.Name = "img32";
+            this.img32.Size = new System.Drawing.Size(69, 96);
+            this.img32.TabIndex = 5;
+            // 
+            // img33
+            // 
+            this.img33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img33.Location = new System.Drawing.Point(112, 201);
+            this.img33.Name = "img33";
+            this.img33.Size = new System.Drawing.Size(69, 96);
+            this.img33.TabIndex = 5;
+            // 
+            // img42
+            // 
+            this.img42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img42.Location = new System.Drawing.Point(20, 201);
+            this.img42.Name = "img42";
+            this.img42.Size = new System.Drawing.Size(69, 96);
+            this.img42.TabIndex = 6;
+            // 
+            // img43
+            // 
+            this.img43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img43.Location = new System.Drawing.Point(111, 201);
+            this.img43.Name = "img43";
+            this.img43.Size = new System.Drawing.Size(69, 96);
+            this.img43.TabIndex = 6;
+            // 
             // Menu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -708,10 +864,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1376, 769);
+            this.Controls.Add(this.lblBienvenido);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btIniciarSesion);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelProducto4);
+            this.Controls.Add(this.panelProducto3);
+            this.Controls.Add(this.panelProducto2);
             this.Controls.Add(this.btDerecha);
             this.Controls.Add(this.btIzquierda);
             this.Controls.Add(this.label4);
@@ -719,7 +877,7 @@
             this.Controls.Add(this.btWindow);
             this.Controls.Add(this.btBuscar);
             this.Controls.Add(this.lblProductos);
-            this.Controls.Add(this.panelImg1);
+            this.Controls.Add(this.panelProducto1);
             this.Controls.Add(this.btMinimizar);
             this.Controls.Add(this.btFull);
             this.Controls.Add(this.btCerrar);
@@ -734,27 +892,21 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Menu_Load);
+            this.Shown += new System.EventHandler(this.Menu_Shown);
             this.panel1.ResumeLayout(false);
             this.panelFiltros.ResumeLayout(false);
             this.panelPerfil.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panelImg1.ResumeLayout(false);
-            this.panelImg1.PerformLayout();
-            this.img1.ResumeLayout(false);
-            this.img1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panelProducto1.ResumeLayout(false);
+            this.panelProducto1.PerformLayout();
+            this.panelProducto2.ResumeLayout(false);
+            this.panelProducto2.PerformLayout();
+            this.panelProducto3.ResumeLayout(false);
+            this.panelProducto3.PerformLayout();
+            this.panelProducto4.ResumeLayout(false);
+            this.panelProducto4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,7 +936,7 @@
         private System.Windows.Forms.Button btWindow;
         private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.Label lblProductos;
-        private System.Windows.Forms.Panel panelImg1;
+        private System.Windows.Forms.Panel panelProducto1;
         private System.Windows.Forms.Button btCarrito;
         private System.Windows.Forms.Panel img1;
         private System.Windows.Forms.Label label4;
@@ -793,22 +945,36 @@
         private System.Windows.Forms.Button btIzquierda;
         private System.Windows.Forms.Button btDerecha;
         private System.Windows.Forms.Button btCarrito1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btIniciarSesion;
+        private System.Windows.Forms.Panel panelProducto2;
+        private System.Windows.Forms.Button btCarrito2;
+        private System.Windows.Forms.Label lblPrecio2;
+        private System.Windows.Forms.Panel img2;
+        private System.Windows.Forms.Label lblProducto2;
+        private System.Windows.Forms.Panel panelProducto3;
+        private System.Windows.Forms.Button btCarrito3;
+        private System.Windows.Forms.Label lblPrecio3;
+        private System.Windows.Forms.Panel img3;
+        private System.Windows.Forms.Label lblProducto3;
+        private System.Windows.Forms.Panel panelProducto4;
+        private System.Windows.Forms.Button btCarrito4;
+        private System.Windows.Forms.Label lblPrecio4;
+        private System.Windows.Forms.Panel img4;
+        private System.Windows.Forms.Label lblProducto4;
+        public System.Windows.Forms.Button btIniciarSesion;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblBienvenido;
+        private System.Windows.Forms.Label lblDesc1;
+        private System.Windows.Forms.Label lblDesc2;
+        private System.Windows.Forms.Label lblDesc3;
+        private System.Windows.Forms.Label lblDesc4;
+        private System.Windows.Forms.Panel img13;
+        private System.Windows.Forms.Panel img12;
+        private System.Windows.Forms.Panel img23;
+        private System.Windows.Forms.Panel img22;
+        private System.Windows.Forms.Panel img33;
+        private System.Windows.Forms.Panel img32;
+        private System.Windows.Forms.Panel img43;
+        private System.Windows.Forms.Panel img42;
     }
 }
 

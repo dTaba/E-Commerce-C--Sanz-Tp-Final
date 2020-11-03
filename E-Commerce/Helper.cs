@@ -10,7 +10,9 @@ namespace E_Commerce
 {
     class Helper
     {
-        internal static string connectionString = (@"server=LAPTOP-LHBBVFT9\SQLEXPRESS;Database=ArticulosECommerce;Trusted_Connection=True");
+        internal static string connectionString = @"server=LAPTOP-LHBBVFT9\SQLEXPRESS;Database=ArticulosECommerce;Trusted_Connection=True";
+        internal static dtoCliente usuarioLogeado;
+
         internal static int GetNextId(string tableName)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -28,6 +30,11 @@ namespace E_Commerce
                     return ultimoId + 1;
                 }
             }
+        }
+
+        internal static void LogearUsuario(dtoCliente cliente)
+        {
+            usuarioLogeado = cliente;
         }
     }
 }

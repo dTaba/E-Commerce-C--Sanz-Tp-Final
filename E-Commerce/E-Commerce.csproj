@@ -46,6 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="daoArticulo.cs" />
+    <Compile Include="daoCliente.cs" />
+    <Compile Include="dtoArticulo.cs" />
+    <Compile Include="dtoCliente.cs" />
+    <Compile Include="editarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editarPerfil.Designer.cs">
+      <DependentUpon>editarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -67,6 +77,9 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="editarPerfil.resx">
+      <DependentUpon>editarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

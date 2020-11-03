@@ -70,7 +70,6 @@
             this.txUsuario.TabIndex = 2;
             this.txUsuario.Text = "Usuario";
             this.txUsuario.Click += new System.EventHandler(this.borrarTexto);
-            this.txUsuario.TextChanged += new System.EventHandler(this.borrarTexto);
             // 
             // panel1
             // 
@@ -168,6 +167,7 @@
             this.btIniciarSesion.TabIndex = 11;
             this.btIniciarSesion.Text = "Iniciar Sesión";
             this.btIniciarSesion.UseVisualStyleBackColor = false;
+            this.btIniciarSesion.Click += new System.EventHandler(this.btIniciarSesion_Click);
             // 
             // btRegistrarse
             // 

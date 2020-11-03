@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Net.Mail;
+using System.IO;
 
 namespace E_Commerce
 {
@@ -18,8 +19,14 @@ namespace E_Commerce
         {
             InitializeComponent();
         }
-        internal static string conn = @"server=LAPTOP-LHBBVFT9\SQLEXPRESS;Database=ArticulosECommerce;Trusted_Connection=True";
-        SqlConnection con = new SqlConnection(conn);
+
+        public void paginaAnterior()
+        {
+            Login formLogin = new Login();
+            this.Hide();
+            formLogin.Show();
+        }
+
         public void borrarTexto(object sender, EventArgs e)
         {
             TextBox textElegido = (TextBox)sender;
@@ -28,9 +35,7 @@ namespace E_Commerce
 
         private void btVolver_Click(object sender, EventArgs e)
         {
-            Login formLogin = new Login();
-            this.Hide();
-            formLogin.Show();
+            paginaAnterior();
         }
 
         private void btRegistrarse_Click(object sender, EventArgs e)
@@ -43,32 +48,35 @@ namespace E_Commerce
             {
                 try
                 {
+                    SqlConnection con = new SqlConnection(Helper.connectionString);
                     con.Open();
-                    SqlCommand cmd2 = new SqlCommand("Select id from Clientes where usuario = '" + txUsuario.Text + "'", con);
-                    cmd2.Parameters.AddWithValue("usuario", this.txUsuario.Text);
-                    var result = cmd2.ExecuteScalar();
-                    if (result != null)
+
+                    SqlCommand cmdUsuario = new SqlCommand("Select id from Clientes where usuario = '" + txUsuario.Text + "'", con);
+                    var resultUsuario = cmdUsuario.ExecuteScalar();
+
+                    if (resultUsuario != null)
                     {
                         MessageBox.Show(string.Format("El usuario {0} ya esta en uso", this.txUsuario.Text));
                         con.Close();
                     }
                     else
                     {
-                        SqlCommand cmd3 = new SqlCommand("Select id from Clientes where mail = '" + txCorreo.Text + "'", con);
-                        cmd3.Parameters.AddWithValue("mail", this.txCorreo.Text);
-                        var result2 = cmd3.ExecuteScalar();
-                        if (result2 != null)
+                        SqlCommand cmdMail = new SqlCommand("Select id from Clientes where mail = '" + txCorreo.Text + "'", con);
+                        var resultMail = cmdMail.ExecuteScalar();
+
+                        if (resultMail != null)
                         {
                             MessageBox.Show(string.Format("El mail {0} ya esta en uso", this.txCorreo.Text));
                             con.Close();
                         }
                         else
                         {
+                            string fecha = txDia.Text + "/" + txMes.Text + "/" + txAño.Text;
                             using (SqlCommand cmd = new SqlCommand())
                             {
                                 cmd.Connection = con;
-                                cmd.CommandText = @"INSERT INTO Clientes (id, usuario, clave, mail, nombre, nacimiento, cantPedidos, nivel, puntos) 
-                                                VALUES ([id],'[usuario]','[clave]','[mail]','[nombre]','[nacimiento]', [cantPedidos], [nivel], [puntos])";
+                                cmd.CommandText = @"INSERT INTO Clientes (id, usuario, clave, mail, nombre, nacimiento, cantPedidos, nivel, puntos, apellido, direccion, telefono) 
+                                                VALUES ([id],'[usuario]','[clave]','[mail]','[nombre]','[nacimiento]', [cantPedidos], [nivel], [puntos], '[apellido]', '[direccion]', '[telefono]')";
 
                                 int id = Helper.GetNextId("Clientes");
 
@@ -77,13 +85,19 @@ namespace E_Commerce
                                 cmd.CommandText = cmd.CommandText.Replace("[clave]", txClave.Text);
                                 cmd.CommandText = cmd.CommandText.Replace("[mail]", txCorreo.Text);
                                 cmd.CommandText = cmd.CommandText.Replace("[nombre]", txNombre.Text);
-                                cmd.CommandText = cmd.CommandText.Replace("[nacimiento]", txNacimiento.Text);
+                                cmd.CommandText = cmd.CommandText.Replace("[nacimiento]", fecha);
                                 cmd.CommandText = cmd.CommandText.Replace("[cantPedidos]", "0");
                                 cmd.CommandText = cmd.CommandText.Replace("[nivel]", "0");
                                 cmd.CommandText = cmd.CommandText.Replace("[puntos]", "0");
+                                cmd.CommandText = cmd.CommandText.Replace("[apellido]", txApellido.Text);
+                                cmd.CommandText = cmd.CommandText.Replace("[direccion]", txDireccion.Text);
+                                cmd.CommandText = cmd.CommandText.Replace("[telefono]", txTelefono.Text);
 
                                 cmd.ExecuteNonQuery();
                                 con.Close();
+
+                                MessageBox.Show("Usuario registrado correctamente, proceda a logearse");
+                                paginaAnterior();
                             }
                         }
                     }
@@ -98,32 +112,51 @@ namespace E_Commerce
 
         public bool IsValid(string emailaddress)
         {
-            try
+            if (txUsuario.Text != "" & txNombre.Text != "" & txApellido.Text != "" & txCorreo.Text != "" & txClave.Text != "" & txDia.Text != "")
             {
-                MailAddress m = new MailAddress(emailaddress);
+                try
+                {
+                    MailAddress m = new MailAddress(emailaddress);
 
-                return true;
+                    return true;
+                }
+                catch (FormatException)
+                {
+                    return false;
+                }
             }
-            catch (FormatException)
+            else
             {
+                MessageBox.Show("Hay campos vacios");
                 return false;
             }
         }
 
         private void txNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar))
+            if (char.IsControl(e.KeyChar) || char.IsLetter(e.KeyChar))
             {
-                e.Handled = true;
+                return;
             }
+            e.Handled = true;
         }
 
         private void txApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar))
+            if (char.IsControl(e.KeyChar) || char.IsLetter(e.KeyChar))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+
+        private void txTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
         }
     }
 }
