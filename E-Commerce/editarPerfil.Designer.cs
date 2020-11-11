@@ -52,17 +52,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txUsuario = new System.Windows.Forms.TextBox();
-            this.txNivel = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.txPuntos = new System.Windows.Forms.TextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -121,7 +115,7 @@
             this.btVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btVolver.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btVolver.Location = new System.Drawing.Point(24, 564);
+            this.btVolver.Location = new System.Drawing.Point(18, 451);
             this.btVolver.Name = "btVolver";
             this.btVolver.Size = new System.Drawing.Size(793, 44);
             this.btVolver.TabIndex = 51;
@@ -220,12 +214,13 @@
             this.btActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btActualizar.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.btActualizar.Location = new System.Drawing.Point(24, 514);
+            this.btActualizar.Location = new System.Drawing.Point(18, 401);
             this.btActualizar.Name = "btActualizar";
             this.btActualizar.Size = new System.Drawing.Size(793, 44);
             this.btActualizar.TabIndex = 50;
             this.btActualizar.Text = "Actualizar datos";
             this.btActualizar.UseVisualStyleBackColor = false;
+            this.btActualizar.Click += new System.EventHandler(this.btActualizar_Click);
             // 
             // label1
             // 
@@ -323,46 +318,6 @@
             this.txUsuario.TabIndex = 42;
             this.txUsuario.Text = "Usuario";
             // 
-            // txNivel
-            // 
-            this.txNivel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.txNivel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txNivel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txNivel.ForeColor = System.Drawing.Color.White;
-            this.txNivel.Location = new System.Drawing.Point(343, 383);
-            this.txNivel.Name = "txNivel";
-            this.txNivel.Size = new System.Drawing.Size(209, 20);
-            this.txNivel.TabIndex = 66;
-            this.txNivel.Text = "Nivel";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(272, 411);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(325, 1);
-            this.panel9.TabIndex = 68;
-            // 
-            // txPuntos
-            // 
-            this.txPuntos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.txPuntos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txPuntos.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txPuntos.ForeColor = System.Drawing.Color.White;
-            this.txPuntos.Location = new System.Drawing.Point(366, 342);
-            this.txPuntos.Name = "txPuntos";
-            this.txPuntos.Size = new System.Drawing.Size(209, 20);
-            this.txPuntos.TabIndex = 65;
-            this.txPuntos.Text = "Puntos";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(272, 372);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(325, 1);
-            this.panel10.TabIndex = 67;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -418,28 +373,6 @@
             this.label6.TabIndex = 73;
             this.label6.Text = "Teléfono:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(280, 343);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 19);
-            this.label7.TabIndex = 74;
-            this.label7.Text = "Puntos:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(280, 383);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 19);
-            this.label8.TabIndex = 75;
-            this.label8.Text = "Nivel:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -478,7 +411,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(280, 430);
+            this.label12.Location = new System.Drawing.Point(258, 338);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(157, 19);
             this.label12.TabIndex = 81;
@@ -488,9 +421,10 @@
             // 
             this.txPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txPedidos.Enabled = false;
             this.txPedidos.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txPedidos.ForeColor = System.Drawing.Color.White;
-            this.txPedidos.Location = new System.Drawing.Point(470, 429);
+            this.txPedidos.Location = new System.Drawing.Point(448, 337);
             this.txPedidos.Name = "txPedidos";
             this.txPedidos.Size = new System.Drawing.Size(144, 20);
             this.txPedidos.TabIndex = 79;
@@ -500,7 +434,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(272, 459);
+            this.panel11.Location = new System.Drawing.Point(250, 367);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(325, 1);
             this.panel11.TabIndex = 80;
@@ -510,24 +444,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(837, 622);
+            this.ClientSize = new System.Drawing.Size(837, 537);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txPedidos);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txNivel);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.txPuntos);
-            this.Controls.Add(this.panel10);
             this.Controls.Add(this.txTelefono);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.txDireccion);
@@ -556,7 +484,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "editarPerfil";
             this.Activated += new System.EventHandler(this.editarPerfil_Activated);
-            this.Load += new System.EventHandler(this.editarPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -590,17 +517,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txUsuario;
-        private System.Windows.Forms.TextBox txNivel;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txPuntos;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

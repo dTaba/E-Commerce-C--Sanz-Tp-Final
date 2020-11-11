@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_Commerce
 {
-    class dtoArticulo
+    public class dtoArticulo
     {
         public int id { get; set; }
         public string nombre { get; set; }

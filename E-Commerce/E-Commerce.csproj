@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="carrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="carrito.Designer.cs">
+      <DependentUpon>carrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="daoArticulo.cs" />
     <Compile Include="daoCliente.cs" />
     <Compile Include="dtoArticulo.cs" />
@@ -77,6 +83,9 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="carrito.resx">
+      <DependentUpon>carrito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editarPerfil.resx">
       <DependentUpon>editarPerfil.cs</DependentUpon>
     </EmbeddedResource>
