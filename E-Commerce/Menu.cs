@@ -154,6 +154,10 @@ namespace E_Commerce
                     lblUsuario.Visible = false;
                     lblBienvenido.Visible = false;
                     btIniciarSesion.Visible = true;
+                    carrito.Clear();
+                    lblSubtotal.Text = "Subtotal: $0";
+                    lblCarrito.Text = "0 Productos";
+
                 }
 
             }
@@ -360,6 +364,11 @@ namespace E_Commerce
             {
                 MessageBox.Show("No hay nada en el carrito", "ERROR");
             }
+
+            if (Helper.usuarioLogeado == null)
+            {
+                MessageBox.Show("Maquinola no estas logeado", "ERROR");
+            }
         }
 
         private void btCarrito2_Click(object sender, EventArgs e)
@@ -474,17 +483,20 @@ namespace E_Commerce
                 {
                     string where = "precio < " + filtroPrecio.Value + " order by precio";
                     filtrarArticulos(where);
+                    lblProductos.Text = "Filtro precio: menos de " + filtroPrecio.Value;
                 }
             }
             else if (filtroPrecio.Value == 0)
             {
                 string where = "categoria='" + cbCategorias.Text + "'";
                 filtrarArticulos(where);
+                lblProductos.Text = "Filtro categoría: " + cbCategorias.Text;
             }
             else
             {
                 string where = "categoria='" + cbCategorias.Text + "' and precio <= " + filtroPrecio.Value + " order by precio";
                 filtrarArticulos(where);
+                lblProductos.Text = "Precio: " + filtroPrecio.Value + " , Categoría: " + cbCategorias.Text;
             }
         }
 
@@ -523,12 +535,56 @@ namespace E_Commerce
 
         private void Menu_Activated(object sender, EventArgs e)
         {
+
+            if (Helper.compra == true)
+            {
+                carrito.Clear();
+                lblSubtotal.Text = "Subtotal: $ 0";
+                lblCarrito.Text = "0 Productos";
+                Helper.compra = false;
+            }
+
+            if (Helper.precio != 0 && Helper.cantidad != 0 )
+            {
+                subtotal = Helper.precio;
+                lblSubtotal.Text = "Subtotal: " + subtotal + " $";
+                lblCarrito.Text = Helper.cantidad + " Productos";
+            }
+
             if (carrito.Count == 0)
             {
                 subtotal = 0;
                 lblSubtotal.Text = "Subtotal: $ " + subtotal;
                 lblCarrito.Text = "0 Productos";
             }
+        }
+
+        private void resetearBusqueda()
+        {
+            btIzquierda.Visible = true;
+            btDerecha.Visible = true;
+            listaFiltro.Clear();
+            
+
+            for (int i = 0; i < 4; i++)
+            {
+                listaPaneles[i].Visible = true;
+                listaPicture[i].BackgroundImageLayout = ImageLayout.Zoom;
+                listaPicture[i].BackgroundImage = lista[i].img1;
+                listaPicture2[i].BackgroundImage = lista[i].img2;
+                listaPicture3[i].BackgroundImage = lista[i].img3;
+
+                listaPrecios[i].Text = "$ " + lista[i].precio.ToString();
+                listaNombres[i].Text = lista[i].nombre;
+                listaDesc[i].Text = lista[i].descripcion;
+            }
+            lblProductos.Text = "Productos Destacados";
+            valor = 0;
+        }
+
+        private void btResetear_Click(object sender, EventArgs e)
+        {
+            resetearBusqueda();
         }
     }
 }

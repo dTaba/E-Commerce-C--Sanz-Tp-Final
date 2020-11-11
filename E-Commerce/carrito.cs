@@ -82,6 +82,10 @@ namespace E_Commerce
             }
 
             lblTotal.Text = "Total: $" + suma;
+
+            Helper.precio = suma;
+            Helper.cantidad = (articulos.Count());
+            
         }
 
         private void btVolver_Click(object sender, EventArgs e)
@@ -115,6 +119,9 @@ namespace E_Commerce
             daoCliente.nuevaCompra(articulos);
             daoCliente.actualizarDatos();
             MessageBox.Show("Compra realizada con exito", "Exito");
+            Helper.compra = true;
+            formmenu.Show();
+            this.Hide();
         }
     }
 }

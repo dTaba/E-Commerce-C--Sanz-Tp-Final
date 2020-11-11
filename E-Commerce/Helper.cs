@@ -12,6 +12,9 @@ namespace E_Commerce
     {
         internal static string connectionString = @"server=LAPTOP-LHBBVFT9\SQLEXPRESS;Database=ArticulosECommerce;Trusted_Connection=True";
         internal static dtoCliente usuarioLogeado;
+        internal static bool compra = false;
+        internal static int cantidad;
+        internal static int precio;
 
         internal static int GetNextId(string tableName)
         {

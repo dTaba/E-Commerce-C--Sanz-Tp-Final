@@ -93,6 +93,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblCarrito = new System.Windows.Forms.Label();
+            this.btResetear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filtroPrecio)).BeginInit();
@@ -902,6 +903,22 @@
             this.lblCarrito.TabIndex = 21;
             this.lblCarrito.Text = "0 Productos";
             // 
+            // btResetear
+            // 
+            this.btResetear.BackColor = System.Drawing.Color.Transparent;
+            this.btResetear.FlatAppearance.BorderSize = 0;
+            this.btResetear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btResetear.ForeColor = System.Drawing.Color.White;
+            this.btResetear.Location = new System.Drawing.Point(208, 627);
+            this.btResetear.Name = "btResetear";
+            this.btResetear.Size = new System.Drawing.Size(130, 68);
+            this.btResetear.TabIndex = 22;
+            this.btResetear.Text = "Resetear Búsqueda";
+            this.btResetear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btResetear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btResetear.UseVisualStyleBackColor = false;
+            this.btResetear.Click += new System.EventHandler(this.btResetear_Click);
+            // 
             // Menu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -909,6 +926,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1376, 769);
+            this.Controls.Add(this.btResetear);
             this.Controls.Add(this.lblCarrito);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.lblUsuario);
@@ -1027,6 +1045,7 @@
         private System.Windows.Forms.Button btAplicarFiltros;
         private System.Windows.Forms.ComboBox cbCategorias;
         private System.Windows.Forms.NumericUpDown filtroPrecio;
+        private System.Windows.Forms.Button btResetear;
     }
 }
 

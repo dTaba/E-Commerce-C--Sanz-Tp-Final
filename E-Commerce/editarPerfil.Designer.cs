@@ -444,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(837, 537);
+            this.ClientSize = new System.Drawing.Size(837, 508);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txPedidos);
             this.Controls.Add(this.panel11);
